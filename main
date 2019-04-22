@@ -1,0 +1,10 @@
+import ccxt
+
+#print(ccxt.exchanges)
+gemini = ccxt.gemini()
+markets = gemini.load_markets()
+pairid = gemini.markets['BTC/USD']['id']
+pair1 = gemini.markets_by_id[pairid]['symbol']
+print(gemini.id, pair1, sep="\n")
+print(dir(ccxt.gemini()))
+print(ccxt.gemini())
